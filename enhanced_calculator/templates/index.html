@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Enhanced Calculator</h2>
+        <input type="text" id="display" placeholder="Result" disabled>
+
+        <div class="buttons">
+            <input type="number" id="num1" placeholder="Number 1">
+            <input type="number" id="num2" placeholder="Number 2 (if needed)">
+
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('divide')">/</button>
+            <button onclick="calculate('power')">^</button>
+            <button onclick="calculate('sqrt')">√</button>
+            <button onclick="calculate('modulo')">%</button>
+            <button onclick="calculate('factorial')">!</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
